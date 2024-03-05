@@ -138,7 +138,9 @@ public class Main {
         while (ok) {
             System.out.println("Menú de condicionales:");
             System.out.println("1.Verificar si un numero es positivo o negativo");
+            System.out.println("2.numero mayor y menor ");
             System.out.println("0.salir");
+        
             int opc = in.nextInt();
 
             switch (opc) {
@@ -147,18 +149,27 @@ public class Main {
                 double num0 = in.nextDouble();
                 System.out.println(exercise.condicionales.numeroposone(num0)); 
                 break;
+                case 2:
+                System.out.println("Ingrese el primer número:");
+                double num = in.nextDouble();
+                System.out.println("Ingrese el segundo numero número:");
+                double num1 = in.nextDouble();
+                System.out.println(exercise.condicionales.nummaymen(num,num1)); 
+                break;
                 case 0:
                     ok = false;
                     break;
-
+                }
+}
             }
-        }
-
-    }
-
-    private static void menu(Scanner in) {
+            private static void menu(Scanner in) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'menu'");
     }
+        }
 
-}
+    
+
+    
+
+
