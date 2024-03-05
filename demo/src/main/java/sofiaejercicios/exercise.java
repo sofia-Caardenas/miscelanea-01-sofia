@@ -1,7 +1,6 @@
 package sofiaejercicios;
 public class exercise {
-    exercise e= new exercise();
-    double num1, num2, num3,num4,num5 ; 
+    public class operadores{
 public static double calcularAreaTriangulo(double num1,double num2){
     double num3 = (num1 * num2) / 2;
     return num3;
@@ -56,6 +55,23 @@ public static double calcularAreaLateralAreaTotalYVolumenCilindro(double num01, 
     return (num05);
     
 }
+
+    }
+    public class condicionales{
+        public static String numeroposone(double num0) {
+            String resultado;
+            
+            if (num0 > 0) {
+                resultado = "el numero es positivo";
+            } else {
+                resultado = "el numero es negativo";
+            }
+            
+            return resultado;
+        }
+    
 }
+}
+
     
 
