@@ -1,7 +1,7 @@
 package sofiaejercicios;
 
 public class exercise {
-    public class operadores {
+    public static class operadores {
         public static double calcularAreaTriangulo(double num1, double num2) {
             double num3 = (num1 * num2) / 2;
             return num3;
@@ -60,30 +60,108 @@ public class exercise {
             return (num05);
 
         }
-
     }
 
-    public class condicionales {
-        public static String numeroposone(double num0) {
-            String resultado;
+    public static class condicionales {
+        public static String numposneg(double res) {
+            String val;
 
-            if (num0 > 0) {
-                resultado = "el numero es positivo";
+            if (res > 0) {
+                val = res + " es positivo.";
             } else {
-                resultado = "el numero es negativo";
+                val = res + " es negativo.";
             }
 
+            return val;
+        }
+
+        public static String numasmen(double num1, double num2) {
+            String val;
+            if (num1 < num2) {
+                val = "El numero " + num1 + " es menor,  el " + num2 + " es el mayor";
+            } else {
+                val = "El numero " + num2 + " es menor, el " + num1 + " es el mayor";
+            }
+            return val;
+        }
+
+        public static String mayomentres(double numi, double nume, double numo) {
+            String resultado;
+            double mayor = numi;
+            if (nume > mayor) {
+                mayor = nume;
+            }
+            if (numo > mayor) {
+                mayor = numo;
+            }
+
+            double menor = numi;
+            if (nume < menor) {
+                menor = nume;
+            }
+            if (numo < menor) {
+                menor = numo;
+            }
+
+            resultado = "El mayor número es el " + mayor + " y el menor es el " + menor + ".";
             return resultado;
         }
 
-        public static String nummaymen(double num, double num1) {
-            String respuesta;
-            if (num < num1) {
-                respuesta = +num + " es menor " + num1 + " es mayor";
-            }else{
-                respuesta = +num1 + " es menor " + num + " es mayor";
+        public static double sumaoresta(double numc, double numd) {
+            double res;
+
+            if (numc < numd) {
+                res = numc + numd;
+            } else {
+                res = numd - numc;
             }
-            return respuesta;
+            System.out.println("El resultado es: ");
+            return res;
+        }
+
+        public static double dividir(double numA, double numB) {
+            double res;
+
+            if (numB == 0) {
+                System.out.println("No se puede dividir entre 0, la división no es posible");
+                res = Double.NaN;
+            } else {
+                res = numA / numB;
+                System.out.println("El cociente entre estos dos números es: ");
+            }
+            return res;
+        }
+
+        public static double sumomul(double numa, double numb) {
+            double res;
+
+            if (numa < 0 || numb < 0) {
+                res = numa + numb;
+                System.out.println("La suma entre estos dos números es: ");
+            } else {
+                res = numa * numb;
+                System.out.println("La multiplicación entre estos dos números da: ");
+            }
+
+            return res;
+        }
+
+        public static String anbisi(Double año) {
+            String res;
+            if (año % 4 == 0) {
+                if (año % 100 == 0) {
+                    if (año % 400 == 0) {
+                        res = año + " sí es bisiesto.";
+                    } else {
+                        res = año + " no es bisiesto.";
+                    }
+                } else {
+                    res = año + " es bisiesto.";
+                }
+            } else {
+                res = año + " no es bisiesto.";
+            }
+            return res;
         }
     }
 }
